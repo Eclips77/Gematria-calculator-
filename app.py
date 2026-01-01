@@ -115,7 +115,9 @@ def compute_english_gematria(text):
     if not text:
         return {}, []
 
-    clean_text = [c.lower() for c in text if c.isalpha()]
+    # Filter only characters that exist in our English map (a-z)
+    # This prevents KeyErrors if user enters Hebrew/foreign chars in English mode
+    clean_text = [c.lower() for c in text if c.lower() in ENGLISH_ORDINAL]
 
     if not clean_text:
         return {}, []

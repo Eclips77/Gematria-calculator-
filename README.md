@@ -1,48 +1,48 @@
-# 🧮 מחשבון גימטריה (Gematria Calculator)
+# 🧮 Gematria Calculator
 
-אפליקציית Streamlit מתקדמת לחישוב ערכי גימטריה בעברית ובאנגלית באופן מיידי. הפרויקט נועד להיות מהיר, מעוצב וקל לשימוש, עם תמיכה מלאה במחשבים ומכשירים ניידים.
+An advanced Streamlit application for computing Hebrew and English Gematria values instantly. This project is designed to be fast, beautiful, and easy to use on both desktop and mobile devices.
 
-## ✨ תכונות עיקריות
+## ✨ Key Features
 
-### 🇮🇱 גימטריה עברית
-*   **רגילה (מספר גדול):** חישוב ערכים סטנדרטיים (א=1...ת=400).
-*   **אותיות סופיות:** ערכים רגילים (ך=20, ם=40 וכו') בהתאם לשיטה הנפוצה.
-*   **ניקוד:** האפליקציה מסננת ניקוד באופן אוטומטי ומחשבת רק את האותיות.
-*   **פירוט:** הצגת הערך של כל אות בנפרד בטבלת פירוט.
-*   **תצוגה:** תמיכה מלאה בכתיבה מימין לשמאל (RTL) ועיצוב בצבעי כחול עמוק.
+### 🇮🇱 Hebrew Gematria
+*   **Standard (Mispar Gadol):** Calculates standard values (Aleph=1...Tav=400).
+*   **Final Letters:** Uses standard values (Khaf Sofit=20, Mem Sofit=40, etc.) following the common method.
+*   **Niqqud Support:** Automatically filters out vowel points (Niqqud) and computes only the letters.
+*   **Breakdown:** Displays the value of each letter individually in a detailed table.
+*   **Display:** Full Right-to-Left (RTL) support with a deep blue color theme.
 
-### 🇺🇸 גימטריה אנגלית
-*   **English Ordinal:** א=1, ב=2... (A=1, B=2...)
-*   **Full Reduction:** צמצום למספר יחיד (Pythagorean 1-9).
-*   **Reverse Ordinal:** סדר הפוך (Z=1, A=26).
-*   **Reverse Reduction:** צמצום בסדר הפוך.
-*   **עיצוב:** ערכת נושא בצבעי זהב.
+### 🇺🇸 English Gematria
+*   **English Ordinal:** A=1, B=2... (Standard alphanumeric order).
+*   **Full Reduction:** Reduces values to a single digit (Pythagorean 1-9 system).
+*   **Reverse Ordinal:** Reverse order values (Z=1, A=26).
+*   **Reverse Reduction:** Reduced values in reverse order.
+*   **Design:** Gold/Orange color theme.
 
-### 🚀 פונקציונליות נוספת
-*   **היסטוריה:** שמירת 5 החישוביים האחרונים.
-*   **שיתוף:** כתובת ה-URL מתעדכנת אוטומטית לשיתוף תוצאות ספציפיות.
-*   **מהירות:** חישוב מיידי (מתחת ל-100ms) גם לטקסטים ארוכים.
+### 🚀 Additional Functionality
+*   **History:** Tracks the last 5 calculations in the current session.
+*   **Sharing:** URL parameters automatically update to allow sharing of specific results.
+*   **Performance:** Instant calculation (under 100ms) even for long texts.
 
-## 🛠️ התקנה והרצה
+## 🛠️ Installation & Usage
 
-הפרויקט בנוי על גבי Python וספריית Streamlit.
+The project is built with Python and Streamlit.
 
-1.  **התקנת דרישות:**
-    וודא שמותקן אצלך Python, ואז הרץ את הפקודה הבאה בטרמינל:
+1.  **Install Requirements:**
+    Ensure you have Python installed, then run the following command in your terminal:
     ```bash
     pip install streamlit pandas
     ```
 
-2.  **הרצת האפליקציה:**
-    הפעל את המחשבון באמצעות הפקודה:
+2.  **Run the App:**
+    Launch the calculator using:
     ```bash
     streamlit run app.py
     ```
 
-הדפדפן ייפתח אוטומטית עם הכתובת המקומית (בדרך כלל `http://localhost:8501`).
+The browser will open automatically at your local address (usually `http://localhost:8501`).
 
-## 📂 מבנה הקובץ
-כל הקוד נמצא בקובץ יחיד `app.py`, הכולל את הלוגיקה, הממשק הגרפי (UI) והעיצוב (CSS).
+## 📂 File Structure
+All code is contained within a single file, `app.py`, which includes the logic, graphical interface (UI), and styling (CSS).
 
 ---
-נבנה באהבה באמצעות Streamlit ❤️
+Built with ❤️ using Streamlit
