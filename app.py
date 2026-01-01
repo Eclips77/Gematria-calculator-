@@ -157,8 +157,8 @@ if 'history' not in st.session_state:
 # URL Parameters Handling
 query_params = st.query_params
 default_lang_idx = 0
-default_text = ""
 
+# Determine language from params
 if "lang" in query_params:
     lang_param = query_params["lang"]
     if lang_param == "english":
@@ -166,8 +166,12 @@ if "lang" in query_params:
     elif lang_param == "hebrew":
         default_lang_idx = 0
 
-if "text" in query_params:
-    default_text = query_params["text"]
+# Initialize input text in session state if not present
+if "input_text_val" not in st.session_state:
+    if "text" in query_params:
+        st.session_state["input_text_val"] = query_params["text"]
+    else:
+        st.session_state["input_text_val"] = ""
 
 # Sidebar
 with st.sidebar:
@@ -205,9 +209,10 @@ st.markdown(f"<h1 style='text-align: center; background: -webkit-linear-gradient
 # Input Section
 input_container = st.container()
 with input_container:
+    # Use session state key to manage value to fix reload/edit issues
     input_text = st.text_area(
         "Input Text",
-        value=default_text,
+        key="input_text_val",
         height=150,
         placeholder=input_placeholder,
         label_visibility="collapsed",
